@@ -12,7 +12,7 @@ def welcome(message):
     def isMSg(message): 
         return True
     
-    @bot.message_handler(func=isMSg)        
-    def reply(messagr):
-        bot.reply_to(message,"that not a command")
+@bot.message_handler(func=isMSg)         # type: ignore
+def reply(message):
+        bot.reply_to(message,"that not command")
 bot.polling()
